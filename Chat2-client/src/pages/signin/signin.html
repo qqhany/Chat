@@ -1,0 +1,21 @@
+
+<ion-header>
+
+  <ion-navbar>
+    <ion-title>ChatApp</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content padding>
+  <form class="login" #f="ngForm" (ngSubmit)="onLogin(f)"> 
+      <ion-item>
+        <ion-input type="email" ngModel name="email" placeholder="email"></ion-input>
+      </ion-item>
+      <ion-item>
+        <ion-input type="password" ngModel name="password" placeholder="password"></ion-input>
+      </ion-item>
+      <button ion-button block fullwidth>Login</button>
+    </form>
+</ion-content>

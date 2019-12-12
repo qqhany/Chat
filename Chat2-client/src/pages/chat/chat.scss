@@ -1,0 +1,23 @@
+page-chat {   
+    .chat{
+        height: 76vh;
+
+    }
+    .no-scroll{
+        scroll-content {
+            overflow-y: hidden;
+        }
+    }
+    .scroll {
+        scroll-content {
+            overflow-y: scroll;
+        }
+    }
+
+    .sender{
+        position: absolute;
+        margin-bottom: 0px;
+        bottom: 0px;
+    }
+}
+

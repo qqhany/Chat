@@ -1,0 +1,48 @@
+
+<ion-header>
+
+  <ion-navbar>
+    <ion-buttons start>
+      <button ion-button icon-only menuToggle>
+        <ion-icon name="menu"></ion-icon>
+      </button>
+    </ion-buttons>
+    <ion-title>{{ chatIn }} Chat</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content class="no-scroll">
+  <ion-content class="chat" #chat>
+    <ion-list class="scroll" no-lines>
+      <ion-item *ngFor = "let chat of chats">
+            <ion-avatar item-left>
+              <img src="https://www.sparklabs.com/forum/styles/comboot/theme/images/default_avatar.jpg">
+            </ion-avatar>
+            <p>{{ chat.user }}</p>
+            <h2>{{ chat.message }}</h2>
+          
+        </ion-item>
+    </ion-list>
+  </ion-content>
+ 
+    <ion-toolbar class="sender">
+        <form (ngSubmit)="onSubmit(f)" #f="ngForm">
+          <ion-grid>
+            <ion-row>
+              <ion-col width-80>
+                  <ion-input type="text" placeholder="Type a message..." ngModel name="message"></ion-input>
+              </ion-col>
+              <ion-col width-20>
+                <button ion-button small type="submit" class="message-form-button">
+                  Send
+                  <ion-icon name="send"></ion-icon> </button>
+              </ion-col>
+            </ion-row>
+          </ion-grid>
+        </form>
+    </ion-toolbar>
+
+
+</ion-content>

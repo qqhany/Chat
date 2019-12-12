@@ -1,0 +1,16 @@
+page-account {
+    .scroll-content {
+            align-items: center;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+    ion-avatar > img {
+            margin: auto;
+            height: auto;
+        }
+    button {
+            width: 90%;
+        }
+
+}

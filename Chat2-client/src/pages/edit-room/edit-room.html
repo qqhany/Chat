@@ -1,0 +1,41 @@
+
+<ion-header>
+
+  <ion-navbar>
+    <ion-title>{{ mode }} Room</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content padding>
+  <form [formGroup] = "roomForm" (ngSubmit)="onSubmit()">
+      <ion-list>
+        <ion-item>
+          <ion-label floating>Title</ion-label>
+          <ion-input type="text" formControlName="title"></ion-input>
+        </ion-item>
+        <ion-item>
+          <ion-label floating>Description(optional)</ion-label>
+          <ion-textarea formControlName="description"></ion-textarea>
+        </ion-item>
+        <ion-item>
+          <ion-label floating>Type</ion-label>
+          <ion-select formControlName="type">
+            <ion-option *ngFor="let option of selectOptions" [value]="option" (ionSelect)="onSelectOption(option)">
+              {{ option }}
+            </ion-option>
+          </ion-select>
+        </ion-item>
+        <ion-item >
+          <ion-label floating [color]="typeColor" >Password</ion-label>
+          <ion-input formControlName="password" [disabled]="!showPassword"></ion-input>
+        </ion-item>
+      </ion-list>
+    <button type="submit" ion-button block [disabled]="!roomForm.valid">
+      Submit 
+    </button>
+  
+  </form>
+
+</ion-content>

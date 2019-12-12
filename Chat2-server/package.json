@@ -1,0 +1,13 @@
+{
+  "name": "chat2-server",
+  "version": "1.0.0",
+  "private": true,
+  "scripts": {
+    "start": "node server.js"
+  },
+  "dependencies": {
+    "body-parser": "^1.17.1",
+    "express": "^4.15.2",
+    "pusher": "^1.5.1"
+  }
+}
